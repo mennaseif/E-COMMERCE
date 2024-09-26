@@ -7,11 +7,11 @@ import { allowedTo, protectedRoutes } from "../auth/auth.controller.js";
 
 const subCategoryRoutes = Router()
 subCategoryRoutes.route('/')
-.post(protectedRoutes, allowedTo('admin'), validate(addSubCategorySchema), addSubCategory)
+.post(protectedRoutes, allowedTo('admin', 'user'), validate(addSubCategorySchema), addSubCategory)
 .get(getSubCategories)
 subCategoryRoutes.route('/:id')
 .get(getSubCategory)
-.put(protectedRoutes, allowedTo('admin', 'manager'), validate(updateSubCategorySchema), updateSubCategory)
+.put(protectedRoutes, allowedTo('admin', 'manager', 'user'), validate(updateSubCategorySchema), updateSubCategory)
 .delete(protectedRoutes, allowedTo('admin'), deleteSubCategory)
 
 export default subCategoryRoutes

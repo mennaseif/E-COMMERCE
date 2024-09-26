@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { allowedTo, protectedRoutes } from "../auth/auth.controller.js";
-import { addReview, deleteReview, getReview, updateReview } from "./review.controller.js";
+import { addReview, deleteReview, getReview, getReviews, updateReview } from "./review.controller.js";
 import { validate } from "../../middleware/validate.js";
 import { addReviewValidSchema, updateReviewValidSchema } from "./review.validation.js";
 
@@ -8,7 +8,7 @@ import { addReviewValidSchema, updateReviewValidSchema } from "./review.validati
 const reviewRoutes = Router()
 reviewRoutes.route('/')
 .post(protectedRoutes, allowedTo('user'), validate(addReviewValidSchema), addReview)
-.get(getReview)
+.get(getReviews)
 reviewRoutes.route('/:id')
 .get(getReview)
 .put(protectedRoutes, allowedTo('user'), validate(updateReviewValidSchema), updateReview)

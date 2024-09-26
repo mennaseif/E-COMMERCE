@@ -22,7 +22,6 @@ const getReviews = catchError(async (req, res, next) =>{
 )
 
 const getReview = catchError(async (req, res, next) => {
-    req.body.user = req.user._id
     let review = await Review.findById(req.params.id)
     review || next (new AppError ("Review is not found", 404))
     !review || res.status(200).json({message:"Success", review})

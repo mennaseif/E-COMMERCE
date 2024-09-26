@@ -1,4 +1,4 @@
-/*import Joi from "joi";
+import Joi from "joi";
 
 
 const signupValidSchema= Joi.object({
@@ -23,4 +23,4 @@ export{
     signupValidSchema,
     signinValidSchema,
     changeUserPasswordValidSchema
-}*/
+}
