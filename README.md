@@ -27,27 +27,18 @@ Payment Gateway: Stripe API 💸
 To run the backend server locally, follow these steps:
 
 Clone the repository:
-
-bash
-Copy code
 git clone https://github.com/mennaseif/E-COMMERCE.git
 cd E-COMMERCE/server
 Install the necessary dependencies:
-
-bash
-Copy code
 npm install
 Set up environment variables: Create a .env file in the server directory and add the following:
 
 env
-Copy code
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET_KEY=your_stripe_secret_key
 Start the server:
 
-bash
-Copy code
 npm run dev
 🚀 Usage
 Once the server is up and running, the API will be accessible at http://localhost:5000. You can interact with the API using tools like Postman to test the following features:
