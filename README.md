@@ -41,7 +41,7 @@ Start the server:
 
 npm run dev
 🚀 Usage
-Once the server is up and running, the API will be accessible at http://localhost:5000. You can interact with the API using tools like Postman to test the following features:
+Once the server is up and running, the API will be accessible at http://localhost:3000. You can interact with the API using tools like Postman to test the following features:
 
 User Authentication: Login, Register, Token-based auth
 Product Management: Add, Edit, Delete products
